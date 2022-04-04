@@ -1,8 +1,10 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+    <nav>
+    <router-link :class="{ active: idx === 0 }" to="/about">About</router-link>
+    <router-link :class="{ active: idx === 1 }" to="/work">work</router-link>
+    <router-link :class="{ active: idx === 2 }" to="/Courses">Courses</router-link>
+  </nav>
+  
   <router-view />
 </template>
 
